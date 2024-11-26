@@ -4,20 +4,14 @@ This repository contains the scripts, data, metadata, and results to perform a G
 
 GENERAL directory structure:
 
-+----- Abies_vs_ozone/
-|	+--1_Sampling/
-|	+--2_Metabolomics/
-|	+--3_Genomics/
-|	+--4_Transcriptomics/
-|	+--5_INFO_PROJECT/
-|	+--README.md
-
+``
 |  +----- Infraespecific_Variation/ # Directory
 |     +--README_InfraespecificVariation.txt # Informacion del proyecto
 |	    +--bin/ # Directory
 |     +--data/ # Directory
 |     +--metadata/ # Directory
 |     +--outputs/ # Directory
+``
 
 README.md : a markdown file about this project. This file includes the repository's disposition.
 
