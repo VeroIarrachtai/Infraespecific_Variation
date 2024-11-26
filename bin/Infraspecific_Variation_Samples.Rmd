@@ -1,0 +1,166 @@
+---
+title: "Infraespecific_Variation_Samples"
+author: "Vero"
+date: "11/20/2024"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: "yeti"
+  pdf_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#LOAD LIBRARIES
+```{r}
+#Load libraries
+library(tidyverse)
+library(openxlsx)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(ggpubr)
+library(car)
+library(MASS)
+```
+
+
+```{r setup, include=FALSE}
+# Cargar datos de secuenciacion y datos del monitoreo participativo
+
+GBS <- read.xlsx("../metadata/GBS.xlsx")  
+
+Epi_GBS <- read.xlsx("../metadata/Epi_GBS.xlsx")  
+
+forest_monitoring <- read.xlsx("../metadata/muestreo_dic2020_tidy.xlsx")  
+```
+
+```{r setup, include=FALSE}
+ # Selecciona las columnas de informacion del data frame del monitoreo participativo para incluirlas en la muestras que se secuenciaron por GBS
+
+forest_selected <- forest_monitoring[, c("locality_key", "plot","tree_health", "X_coordinates_latitude","X_coordinates_longitude", "X_coordinates_altitude","person_key", "tree_number", "tree_diameter_category", "tree_heigth", "tree_nodes", "ozone_damage_percentage", "other_damages_percentage", "other_damages_percentage.less_10", "other_damages_percentage.10.40", "other_damages_percentage.50","other_damages_percentage.50.70","other_damages_percentage.70.100", "bud", "branch_nodes", "nodes_with_leaves", "cones", "cone_sex", "tree_exposition", "surronding_vegetation.fir","surronding_vegetation.pine", "surronding_vegetation.oak", "surronding_vegetation.bush", "surronding_vegetation.grass", "surronding_vegetation.other", "reforested", "tree_id")]
+
+# Une datos de la data frame GBS y datos seleccionados de la data frame del monitoreo participativo forest_monitoring 
+df_combined_GBS <- merge(GBS, forest_selected, by = "tree_id",all.x = TRUE)
+
+```
+
+```{r setup, include=FALSE}
+#Detectar diferencias entre 2 columnas
+
+#Descartar B122, G110, G63 porque el número de nodos o el numero de parcela difiere entre ambas bases
+# Filtrar eliminando las filas con ID específicos
+df_combined_GBS <- df_combined_GBS %>%
+  filter(!tree_id %in% c("B112", "G110", "G63"))
+
+```
+
+
+```{r setup, include=FALSE}
+# Agregar las coordenadas de las muestras que tenemos el transcriptoma:
+
+# Latitude: 19.285 N
+#Longitude: -99.301 E
+
+# Crear un vector con las coordenadas faltantes de las muestras de datos transcriptomicos
+latitudes_faltantes <- c(
+  "VD01" = "19.285",    
+  "VD02" = "19.285",
+  "VD03" = "19.285",    
+  "VD04" = "19.285",
+  "VD05" = "19.285",    
+  "VS01" = "19.285",
+  "VS02" = "19.285",    
+  "VS03" = "19.285",
+  "VS04" = "19.285",
+  "VS05" = "19.285",    
+  "VS03" = "19.285",
+  "VD02r" = "19.285",    
+  "VD03r" = "19.285",
+  "VD04r" = "19.285",
+  "VS04r" = "19.285" 
+)
+
+longitudes_faltantes <- c(
+  "VD01" = "-99.301",    
+  "VD02" = "-99.301",
+  "VD03" = "-99.301",    
+  "VD04" = "-99.301",
+  "VD05" = "-99.301",    
+  "VS01" = "-99.301",
+  "VS02" = "-99.301",    
+  "VS03" = "-99.301",
+  "VS04" = "-99.301",
+  "VS05" = "-99.301",    
+  "VS03" = "-99.301",
+  "VD02r" = "-99.301",    
+  "VD03r" = "-99.301",
+  "VD04r" = "-99.301",
+  "VS04r" = "-99.301" 
+)
+
+#Agrega las latitudes y longitudes faltantes de las muestras que tienen datos transcriptomicos
+
+df_combined_GBS <- df_combined_GBS %>%
+  mutate(X_coordinates_latitude = ifelse(
+    is.na(X_coordinates_latitude),                # Si el valor de Coordenadas es NA
+    latitudes_faltantes[tree_id],         # Asignar el valor correspondiente del vector
+    X_coordinates_latitude                        # Mantener el valor original si no es NA
+  ))
+
+df_combined_GBS <- df_combined_GBS %>%
+  mutate(X_coordinates_longitude = ifelse(
+    is.na(X_coordinates_longitude),                # Si el valor de Coordenadas es NA
+    longitudes_faltantes[tree_id],         # Asignar el valor correspondiente del vector
+    X_coordinates_longitude                        # Mantener el valor original si no es NA
+  ))
+
+
+#Export data
+write.csv(df_combined_GBS, "../outputs/df_GBS_metadata.csv", row.names = FALSE)
+
+```
+
+
+
+```{r setup, include=FALSE}
+
+ # Selecciona las columnas de informacion del data frame del monitoreo participativo para incluirlas en la muestras que se secuenciaron por GBS
+
+forest_selected <- forest_monitoring[, c("locality_key", "plot","tree_health", "X_coordinates_latitude","X_coordinates_longitude", "X_coordinates_altitude","person_key", "tree_number", "tree_diameter_category", "tree_heigth", "tree_nodes", "ozone_damage_percentage", "other_damages_percentage", "other_damages_percentage.less_10", "other_damages_percentage.10.40", "other_damages_percentage.50","other_damages_percentage.50.70","other_damages_percentage.70.100", "bud", "branch_nodes", "nodes_with_leaves", "cones", "cone_sex", "tree_exposition", "surronding_vegetation.fir","surronding_vegetation.pine", "surronding_vegetation.oak", "surronding_vegetation.bush", "surronding_vegetation.grass", "surronding_vegetation.other", "reforested", "tree_id")]
+
+# Une datos de la data frame GBS y datos seleccionados de la data frame del monitoreo participativo forest_monitoring 
+df_combined_Epi_GBS <- merge(Epi_GBS, forest_selected, by = "tree_id",all.x = TRUE)
+
+
+#Agrega las latitudes y longitudes faltantes de las muestras que tienen datos transcriptomicos
+
+df_combined_Epi_GBS <- df_combined_Epi_GBS %>%
+  mutate(X_coordinates_latitude = ifelse(
+    is.na(X_coordinates_latitude),                # Si el valor de Coordenadas es NA
+    latitudes_faltantes[tree_id],         # Asignar el valor correspondiente del vector
+    X_coordinates_latitude                        # Mantener el valor original si no es NA
+  ))
+
+df_combined_Epi_GBS <- df_combined_Epi_GBS %>%
+  mutate(X_coordinates_longitude = ifelse(
+    is.na(X_coordinates_longitude),                # Si el valor de Coordenadas es NA
+    longitudes_faltantes[tree_id],         # Asignar el valor correspondiente del vector
+    X_coordinates_longitude                        # Mantener el valor original si no es NA
+  ))
+
+#Export data
+write.csv(df_combined_Epi_GBS, "../outputs/df_Epi_GBS_metadata.csv", row.names = FALSE)
+```
+
+```{r setup, include=FALSE}
+ 
+```
+
+```{r setup, include=FALSE}
+ 
+```
+
+
