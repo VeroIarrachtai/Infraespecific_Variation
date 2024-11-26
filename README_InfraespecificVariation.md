@@ -4,14 +4,14 @@ This repository contains the scripts, data, metadata, and results to perform a G
 
 GENERAL directory structure:
 
-<p>
+```
 |  +----- Infraespecific_Variation/ # Directory
 |     +--README_InfraespecificVariation.txt # Informacion del proyecto
 |	    +--bin/ # Directory
 |     +--data/ # Directory
 |     +--metadata/ # Directory
 |     +--outputs/ # Directory
-<p>
+```
 
 README.md : a markdown file about this project. This file includes the repository's disposition.
 
@@ -19,6 +19,7 @@ README.md : a markdown file about this project. This file includes the repositor
 
 **data** : Contains all the plates and files sent (barcodes, sequence quality, sequencing details) by the sequencing service.
 
+```
 | +--data/	# Directory
 |   +--Epi-GBS/	# Directory
 |       +--FALTA ########################################
@@ -49,9 +50,11 @@ README.md : a markdown file about this project. This file includes the repositor
 |           +-M006005_Jaramillo-Correa_md5sum_P4-secondtime.txt # Nombre de los archivos con las secuencias fasta de esta placa
 |           +-Plate4JPJCGBS_S145_L003_R1_001.fastq.gz # Secuencias fasta comprimidas
 |           +-Plate4JPJCGBS_S145_L003_R2_001.fastq.gz # Secuencias fasta comprimidas
+```
 
 **metadata**: Data requested by the sequencing platforms (gels, formats), sampling information (coordinates, altitude, IDs), sample ID, etc.
 
+```
 |     +--metadata/	# Directory
 |         +--Epi-GBS/	# Directory
 |         +-EpiGBS_sample_list_with_barcodes.xlsx # Archivo con los barcodes para cada pozo y placa enviada
@@ -75,9 +78,12 @@ README.md : a markdown file about this project. This file includes the repositor
 |         +--Epi_GBS.xlsx # Base de datos con los IDs de las muestras secuenciadas en Epi-GBS
 |         +--GBS.xlsx # Base de datos con los IDs de las muestras secuenciadas en GBS
 |         +--muestreo_dic2020_tidy.xlsx # Base de datos con todas las medidas tomadas durante el monitoreo participativo en el bosque durante 2021-2022
+```
 
 **outputs**: Final databases with all the information for each sample selected in the sequencing.
 
+```
 |     +--outputs/	# Directory
 |         +--df_Epi_GBS_metadata.csv # Base de datos para demutiplexeo y analisis de datos GBS
 |         +--df_GBS_metadata.csv # Base de datos para demutiplexeo y analisis de datos Epi-GBS
+```
