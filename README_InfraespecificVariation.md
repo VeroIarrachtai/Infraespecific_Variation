@@ -4,14 +4,14 @@ This repository contains the scripts, data, metadata, and results to perform a G
 
 GENERAL directory structure:
 
-``
+<p>
 |  +----- Infraespecific_Variation/ # Directory
 |     +--README_InfraespecificVariation.txt # Informacion del proyecto
 |	    +--bin/ # Directory
 |     +--data/ # Directory
 |     +--metadata/ # Directory
 |     +--outputs/ # Directory
-``
+<p>
 
 README.md : a markdown file about this project. This file includes the repository's disposition.
 
