@@ -3,9 +3,10 @@
 This repository contains the scripts, data, metadata, and results to perform a GBS and EpiGBS data assembly
 
 Los datos .fastq se encuentran en:
-* Disco duro externo 6TB de Juan Pablo Jaramillo Correa, ubicado en el Laboratorio en Instituto de Ecología (desconozco ubicación precisa de directorios) (datos fasta GBS y EpiGBS)
-* Disco duro externo de Omar Clemente S, Casa de Omar (datos fasta GBS)
-* Disco duro externo 6TB de Verónica Reyes Galindo, Casa de Vero (datos fasta GBS y EpiGBS)
+* Disco duro externo 6TB de Juan Pablo Jaramillo Correa, ubicado en el Laboratorio en Instituto de Ecología (desconozco ubicación precisa de directorios) (datos fasta GBS y EpiGBS, todas las placas)
+* Disco duro externo de Omar Clemente S, Casa de Omar (desconozco ubicación precisa de directorios) (datos fasta GBS, todas las placas)
+* Disco duro externo de Edgar, Casa de Edgar (desconozco ubicación precisa de directorios) (datos fasta GBS placa 1 y 2 unicamente)
+* Disco duro externo 6TB de Verónica Reyes Galindo, Casa de Vero (datos fasta GBS y EpiGBS, todas las placas)
 
 ```
 # Datos secuenciación GBS
@@ -15,7 +16,8 @@ Los datos .fastq se encuentran en:
 /Snoopy/ALL_fasta_Epi-GBS
 ```
 
-* Cluster CONABIO
+* Cluster CONABIO cuenta de Verónica
+
 ```
 # Datos secuenciación GBS
 /vreyes/InfraespecioficVariation/data/ALL_fasta_GBS
@@ -23,6 +25,16 @@ Los datos .fastq se encuentran en:
 # Datos secuenciación Epi-GBS
 /vreyes/InfraespecioficVariation/data/ALL_fasta_Epi-GBS
 ```
+* Cluster CONABIO cuenta common
+
+```
+# Datos secuenciación GBS
+/vreyes/InfraespecioficVariation/data/ALL_fasta_GBS
+
+# Datos secuenciación Epi-GBS
+/vreyes/InfraespecioficVariation/data/ALL_fasta_Epi-GBS
+```
+
 
 # Size and md5 hashes for GBS and Epi-GBS fasta files
 
@@ -38,15 +50,12 @@ Las tablas con la información se encuentran en ``outputs``
 ![md5_fasta_Epi-GBS](outputs/md5_fasta_Epi-GBS.png)
 
 
-
-
-
 ## GENERAL directory structure:
 
 ```
 |  +----- Infraespecific_Variation/     # Directory
 |     +--README_InfraespecificVariation.txt     # Informacion del proyecto
-|	    +--bin/     # Directory
+|     +--bin/     # Directory
 |     +--data/     # Directory
 |     +--metadata/    # Directory
 |     +--outputs/     # Directory
@@ -120,10 +129,10 @@ README.md : a markdown file about this project. This file includes the repositor
 |               +-GBS_P1y2.xlsx     # Formatos enviados a la plataforma de secuenciación de las placas 1 y 2
 |               +-GBSP_3y4.xlsx     # Formatos enviados a la plataforma de secuenciación de las placas 3 y 4
 |               +-Geles-GBS     # Directory
-|                  +-Enzyme_digestion_HindIII.pdf     # Prueba para corroborar que las enzimas digieren nuestras muestras
-|                   +-P1-P2_Gel_Samples.pdf     # Geles de la placa 1 y 2
-|                   +-P3_GBS_Jaramillo-Correa.pdf     # Geles de la placa 3
-|                   +-P4_GBS_Jaramillo-Correa.pdf     # Geles de la placa 4
+|                    +-Enzyme_digestion_HindIII.pdf     # Prueba para corroborar que las enzimas digieren nuestras muestras
+|                    +-P1-P2_Gel_Samples.pdf     # Geles de la placa 1 y 2
+|                    +-P3_GBS_Jaramillo-Correa.pdf     # Geles de la placa 3
+|                    +-P4_GBS_Jaramillo-Correa.pdf     # Geles de la placa 4
 |         +--Epi_GBS.xlsx    # Base de datos con los IDs de las muestras secuenciadas en Epi-GBS
 |         +--GBS.xlsx     # Base de datos con los IDs de las muestras secuenciadas en GBS
 |         +--muestreo_dic2020_tidy.xlsx     # Base de datos con todas las medidas tomadas durante el monitoreo participativo en el bosque durante 2021-2022
@@ -139,4 +148,8 @@ README.md : a markdown file about this project. This file includes the repositor
 |         +--size_fasta_Epi-GBS.csv     # Información del tamaño de los archivos fasta Epi-GBS
 |         +--md5_fasta_GBS.csv     # Información del codigo md5 de los archivos fasta GBS
 |         +--md5_fasta_Epi-GBS.csv     # Información del codigo md5 de los archivos fasta Epi-GBS
+|         +--size_fasta_GBS.png     # Screenshot de tabla generada con script bin/Infraspecific_Variation_Samples.Rmd
+|         +--size_fasta_Epi-GBS.png     # Screenshot de tabla generada con script bin/Infraspecific_Variation_Samples.Rmd
+|         +--md5_fasta_GBS.png     # Screenshot de tabla generada con script bin/Infraspecific_Variation_Samples.Rmd
+|         +--md5_fasta_Epi-GBS.png     # Screenshot de tabla generada con script bin/Infraspecific_Variation_Samples.Rmd
 ```
