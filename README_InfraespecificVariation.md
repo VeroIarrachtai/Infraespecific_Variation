@@ -212,7 +212,7 @@ El código cotejado para nombrar cada muestra se puede encontrar en la columna I
 - La **N** se refiere al número de nodos contados para ese árbol registrado.
 - La **P** indica el número de parcela donde fue colectado ese árbol.
 
-## Muestras provenientes de árboles madre:
+## <span style="color:green;">Muestras provenientes de árboles madre:</span> 
 
 **Ejemplo: PP04_NNAP01 y AMP08_NNAPNA**
 
