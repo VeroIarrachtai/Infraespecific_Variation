@@ -165,7 +165,7 @@ README.md : a markdown file about this project. This file includes the repositor
 
 El código cotejado para nombrar cada muestra se puede encontrar en la columna ID_sample_correct de los archivos ``df_GBS_metadata.csv`` y ``df_GBS_metadata.csv``
 
-## Muestras del bosque colectadas a traves del monitoreo participativo
+## ## <span style="color:blue;">Muestras del bosque colectadas a traves del monitoreo participativo</span>
 
 **Ejemplo: A1_N10P02**
 
@@ -212,7 +212,7 @@ El código cotejado para nombrar cada muestra se puede encontrar en la columna I
 - La **N** se refiere al número de nodos contados para ese árbol registrado.
 - La **P** indica el número de parcela donde fue colectado ese árbol.
 
-## <span style="color:green;">Muestras provenientes de árboles madre:</span> 
+## Muestras provenientes de árboles madre:
 
 **Ejemplo: PP04_NNAP01 y AMP08_NNAPNA**
 
