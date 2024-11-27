@@ -3,10 +3,10 @@
 This repository contains the scripts, data, metadata, and results to perform a GBS and EpiGBS data assembly
 
 Los datos .fastq se encuentran en:
-* Disco duro externo 6TB de Juan Pablo Jaramillo Correa, ubicado en el Laboratorio en Instituto de Ecología (desconozco ubicación precisa de directorios) (datos fasta GBS y EpiGBS, todas las placas)
-* Disco duro externo de Omar Clemente S, Casa de Omar (desconozco ubicación precisa de directorios) (datos fasta GBS, todas las placas)
-* Disco duro externo de Edgar, Casa de Edgar (desconozco ubicación precisa de directorios) (datos fasta GBS placa 1 y 2 unicamente)
-* Disco duro externo 6TB de Verónica Reyes Galindo, Casa de Vero (datos fasta GBS y EpiGBS, todas las placas)
+1. Disco duro externo 6TB de Juan Pablo Jaramillo Correa, ubicado en el Laboratorio en Instituto de Ecología (desconozco ubicación precisa de directorios) (datos fasta GBS y EpiGBS, todas las placas)
+2. Disco duro externo de Omar Clemente S, Casa de Omar (desconozco ubicación precisa de directorios) (datos fasta GBS, todas las placas)
+3. Disco duro externo de Edgar, Casa de Edgar (desconozco ubicación precisa de directorios) (datos fasta GBS placa 1 y 2 unicamente)
+4. Disco duro externo 6TB de Verónica Reyes Galindo, Casa de Vero (datos fasta GBS y EpiGBS, todas las placas)
 
 ```
 # Datos secuenciación GBS
@@ -16,7 +16,7 @@ Los datos .fastq se encuentran en:
 /Snoopy/ALL_fasta_Epi-GBS
 ```
 
-* Cluster CONABIO cuenta de Verónica
+5. Cluster CONABIO cuenta de Verónica
 
 ```
 # Datos secuenciación GBS
@@ -25,7 +25,7 @@ Los datos .fastq se encuentran en:
 # Datos secuenciación Epi-GBS
 /vreyes/InfraespecioficVariation/data/ALL_fasta_Epi-GBS
 ```
-* Cluster CONABIO cuenta common
+6. Cluster CONABIO cuenta common
 
 ```
 # Datos secuenciación GBS
@@ -169,22 +169,22 @@ El código cotejado para nombrar cada muestra se puede encontrar en la columna I
 
 **Ejemplo: A1_N10P02**
 
-La **letra** indica el brigadista que tomo los datos en campo (Ej. brigadista A)
-El **numero consecutivo** indica el número de árbol colectado por cada brigadista (Ej. árbol 1 colectado por brigadista A)
-El **guión** ayuda a separar los siguientes datos de esa muestras
-La **N** se refiere al número de nodos contados para ese árbol registrado (Ej. 10 nodos que puede interpretarse como 10 años de edad)
-La **P** indica el número de parcela donde fue colectado ese árbol (Ej. parcela número 2)
+- La **letra** indica el brigadista que tomo los datos en campo (Ej. brigadista A)
+- El **numero consecutivo** indica el número de árbol colectado por cada brigadista (Ej. árbol 1 colectado por brigadista A)
+- El **guión** ayuda a separar los siguientes datos de esa muestras
+- La **N** se refiere al número de nodos contados para ese árbol registrado (Ej. 10 nodos que puede interpretarse como 10 años de edad)
+- La **P** indica el número de parcela donde fue colectado ese árbol (Ej. parcela número 2)
 
 ## Muestras del bosque incluidas en el experimento controlado
 
 **Ejemplo: AE06_N04TAF**
 
 - Las **letras** indican el tratamiento de ozono bajo el que fueron sometidas
-CA: Tratamiento ozono contingencia en cámaras
-CC: Tratamiento ozono moderado en cámaras
-AX: Tratamiento con aire de SRX
-AE: Tratamiento con aire del Instituto de Ecología
-AP: Tratamiento con aire purificado
+1. CA: Tratamiento ozono contingencia en cámaras
+2. CC: Tratamiento ozono moderado en cámaras
+3. AX: Tratamiento con aire de SRX
+4. AE: Tratamiento con aire del Instituto de Ecología
+5. AP: Tratamiento con aire purificado
 
 - Los **números** siguientes a la clave descrita indican el número de árbol en cada tratamiento, van del 1-30 por tratamiento.
 - El **guión** ayuda a separar los siguientes datos de esa muestras
@@ -192,7 +192,7 @@ AP: Tratamiento con aire purificado
 - La **T** se refiere al tratamiento antes o después del experimento con ozono. Si dice **BE** porque son "before" a la dosis de ozono (muestras colectadas en marzo 2023). Si dice **AF** porque son "after" a la dosis de ozono (muestras colectadas en junio 2023).
 
 
-## Muestras del bosque colectadas en 2017 y de las cuales contamos con transcriptoma de referencia. Las muestras son producto de la extraccion de un pool de hojas de una rama ubicando el periodo 2015 y 2016.
+## Muestras del bosque colectadas en 2017 y de las cuales contamos con transcriptoma de referencia.
 
 **Ejemplo: VD03_NNAPNA**
 
