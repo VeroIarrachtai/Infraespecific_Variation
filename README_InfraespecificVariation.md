@@ -165,7 +165,7 @@ README.md : a markdown file about this project. This file includes the repositor
 
 El código cotejado para nombrar cada muestra se puede encontrar en la columna ID_sample_correct de los archivos ``df_GBS_metadata.csv`` y ``df_GBS_metadata.csv``
 
-* Muestras del bosque colectadas a traves del monitoreo participativo
+## Muestras del bosque colectadas a traves del monitoreo participativo
 
 **Ejemplo: A1_N10P02**
 
@@ -175,7 +175,7 @@ El **guión** ayuda a separar los siguientes datos de esa muestras
 La **N** se refiere al número de nodos contados para ese árbol registrado (Ej. 10 nodos que puede interpretarse como 10 años de edad)
 La **P** indica el número de parcela donde fue colectado ese árbol (Ej. parcela número 2)
 
-* Muestras del bosque incluidas en el experimento controlado
+## Muestras del bosque incluidas en el experimento controlado
 
 **Ejemplo: AE06_N04TAF**
 
@@ -192,7 +192,7 @@ AP: Tratamiento con aire purificado
 - La **T** se refiere al tratamiento antes o después del experimento con ozono. Si dice **BE** porque son "before" a la dosis de ozono (muestras colectadas en marzo 2023). Si dice **AF** porque son "after" a la dosis de ozono (muestras colectadas en junio 2023).
 
 
-* Muestras del bosque colectadas en 2017 y de las cuales contamos con transcriptoma de referencia. Las muestras son producto de la extraccion de un pool de hojas de una rama ubicando el periodo 2015 y 2016.
+## Muestras del bosque colectadas en 2017 y de las cuales contamos con transcriptoma de referencia. Las muestras son producto de la extraccion de un pool de hojas de una rama ubicando el periodo 2015 y 2016.
 
 **Ejemplo: VD03_NNAPNA**
 
@@ -203,7 +203,7 @@ AP: Tratamiento con aire purificado
 - La palabra **oneyear** se refiere a las muestras producto de la extraccion del periodo 2016 (un año de exposición).
 - La palabra **bud** se refiere a las muestras producto de la extraccion del periodo 2017 (yema).
 
-* Muestras provenientes de gametofitos de Abies religiosa
+## Muestras provenientes de gametofitos de Abies religiosa
 
 **Ejemplo: T14_NNAPNA**
 
@@ -212,7 +212,7 @@ AP: Tratamiento con aire purificado
 - La **N** se refiere al número de nodos contados para ese árbol registrado.
 - La **P** indica el número de parcela donde fue colectado ese árbol.
 
-* Muestras provenientes de árboles madre:
+## Muestras provenientes de árboles madre:
 
 **Ejemplo: PP04_NNAP01 y AMP08_NNAPNA**
 
@@ -223,7 +223,7 @@ AP: Tratamiento con aire purificado
 - La **P** indica el número de parcela donde fue colectado ese árbol.
 
 
-**NOTAS:**
+## **NOTAS:**
 - La presencia de **NA** en los nombres indica que no contamos con esa información. Puede deberse a que eran incontables el numero de nodos o a que la muestra no proviene de ninguna parcela del monitoreo participativo.
 
 **Ejemplo: T14_NNAPNA**
