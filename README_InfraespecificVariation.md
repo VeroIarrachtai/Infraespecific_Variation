@@ -179,53 +179,55 @@ La **P** indica el número de parcela donde fue colectado ese árbol (Ej. parcel
 
 **Ejemplo: AE06_N04TAF**
 
-Las **letras** indican el tratamiento de ozono bajo el que fueron sometidas
+- Las **letras** indican el tratamiento de ozono bajo el que fueron sometidas
 CA: Tratamiento ozono contingencia en cámaras
 CC: Tratamiento ozono moderado en cámaras
 AX: Tratamiento con aire de SRX
 AE: Tratamiento con aire del Instituto de Ecología
 AP: Tratamiento con aire purificado
 
-Los **números** siguientes a la clave descrita indican el número de árbol en cada tratamiento, van del 1-30 por tratamiento.
-El **guión** ayuda a separar los siguientes datos de esa muestras
-La **N** se refieren al número de nodos, que para todos los arboles del experimento controlado es 4, ya que tenían la misma edad.
-La **T** se refiere al tratamiento antes o después del experimento con ozono. Si dice **BE** porque son "before" a la dosis de ozono (muestras colectadas en marzo 2023). Si dice **AF** porque son "after" a la dosis de ozono (muestras colectadas en junio 2023).
+- Los **números** siguientes a la clave descrita indican el número de árbol en cada tratamiento, van del 1-30 por tratamiento.
+- El **guión** ayuda a separar los siguientes datos de esa muestras
+- La **N** se refieren al número de nodos, que para todos los arboles del experimento controlado es 4, ya que tenían la misma edad.
+- La **T** se refiere al tratamiento antes o después del experimento con ozono. Si dice **BE** porque son "before" a la dosis de ozono (muestras colectadas en marzo 2023). Si dice **AF** porque son "after" a la dosis de ozono (muestras colectadas en junio 2023).
 
 
 * Muestras del bosque colectadas en 2017 y de las cuales contamos con transcriptoma de referencia. Las muestras son producto de la extraccion de un pool de hojas de una rama ubicando el periodo 2015 y 2016.
 
 **Ejemplo: VD03_NNAPNA**
 
-**VD:** árboles dañados por ozono colectados en 2017 en Cruz de Coloxtitla.
-**VS:** árboles sanos colectados en 2017 en Cruz de Coloxtitla.
-El **guión** ayuda a separar los siguientes datos de esa muestras.
-La palabra **transcriptomics** se refiere a las muestras producto de la extraccion de un pool de hojas de una rama ubicando el periodo 2015 y 2016 (dos años de exposición en pool).
-La palabra **oneyear** se refiere a las muestras producto de la extraccion del periodo 2016 (un año de exposición).
-La palabra **bud** se refiere a las muestras producto de la extraccion del periodo 2017 (yema).
+- **VD:** árboles dañados por ozono colectados en 2017 en Cruz de Coloxtitla.
+- **VS:** árboles sanos colectados en 2017 en Cruz de Coloxtitla.
+- El **guión** ayuda a separar los siguientes datos de esa muestras.
+- La palabra **transcriptomics** se refiere a las muestras producto de la extraccion de un pool de hojas de una rama ubicando el periodo 2015 y 2016 (dos años de exposición en pool).
+- La palabra **oneyear** se refiere a las muestras producto de la extraccion del periodo 2016 (un año de exposición).
+- La palabra **bud** se refiere a las muestras producto de la extraccion del periodo 2017 (yema).
 
 * Muestras provenientes de gametofitos de Abies religiosa
 
 **Ejemplo: T14_NNAPNA**
 
-La **letra y el número** hacen referencia al codigo que tiene Gus en sus muestras.
-El **guión** ayuda a separar los siguientes datos de esa muestras.
-La **N** se refiere al número de nodos contados para ese árbol registrado.
-La **P** indica el número de parcela donde fue colectado ese árbol.
+- La **letra y el número** hacen referencia al codigo que tiene Gus en sus muestras.
+- El **guión** ayuda a separar los siguientes datos de esa muestras.
+- La **N** se refiere al número de nodos contados para ese árbol registrado.
+- La **P** indica el número de parcela donde fue colectado ese árbol.
 
 * Muestras provenientes de árboles madre:
 
 **Ejemplo: PP04_NNAP01 y AMP08_NNAPNA**
 
-La **letra** indica si es un árbol madre potencial **PP** o un arbol que es actualmente utilizado como semillero **AMP**.
-El **numero consecutivo** indica el número de árbol colectado.
-El **guión** ayuda a separar los siguientes datos de esa muestras.
-La **N** se refiere al número de nodos contados para ese árbol registrado.
-La **P** indica el número de parcela donde fue colectado ese árbol.
+- La **letra** indica si es un árbol madre potencial **PP** o un arbol que es actualmente utilizado como semillero **AMP**.
+- El **numero consecutivo** indica el número de árbol colectado.
+- El **guión** ayuda a separar los siguientes datos de esa muestras.
+- La **N** se refiere al número de nodos contados para ese árbol registrado.
+- La **P** indica el número de parcela donde fue colectado ese árbol.
 
 
 **NOTAS:**
-La presencia de **NA** en los nombres indica que no contamos con esa información. Puede deberse a que eran incontables el numero de nodos o a que la muestra no proviene de ninguna parcela del monitoreo participativo.
+- La presencia de **NA** en los nombres indica que no contamos con esa información. Puede deberse a que eran incontables el numero de nodos o a que la muestra no proviene de ninguna parcela del monitoreo participativo.
+
 **Ejemplo: T14_NNAPNA**
 
-Aquellos nombres que contienen una **letra r minuscula** hacen referencia a replicas de la misma muestra
+- Aquellos nombres que contienen una **letra r minuscula** hacen referencia a replicas de la misma muestra
+
 **Ejemplo: VD3r_NNAPNA**
