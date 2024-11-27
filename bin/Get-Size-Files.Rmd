@@ -1,0 +1,179 @@
+---
+title: "Infraespecific_Variation_Samples"
+author: "Vero"
+date: "11/20/2024"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: "yeti"
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Load libraries
+
+```{r setup, include=FALSE}
+# Load libraries
+library(digest)
+```
+
+# Get size fasta files 
+
+## GBS
+
+```{r setup, include=FALSE}
+# Get path
+directorio <- "../data/ALL_fasta_GBS"
+
+# List all files in the directory
+archivos <- list.files(directorio, full.names = TRUE)
+
+# Get size
+info_archivos <- file.info(archivos)
+
+# Display name and size
+tamaños <- data.frame(
+  Archivo = basename(archivos),
+  Tamaño_Bytes = info_archivos$size
+)
+print(tamaños)
+
+# Function to convert bytes into readable units
+convertir_tamaño <- function(tamaño_bytes) {
+  if (tamaño_bytes < 1024) {
+    return(paste(tamaño_bytes, "B"))
+  } else if (tamaño_bytes < 1024^2) {
+    return(paste(round(tamaño_bytes / 1024, 2), "KB"))
+  } else if (tamaño_bytes < 1024^3) {
+    return(paste(round(tamaño_bytes / 1024^2, 2), "MB"))
+  } else {
+    return(paste(round(tamaño_bytes / 1024^3, 2), "GB"))
+  }
+}
+
+# Apply the conversion
+tamaños$Tamaño_abreviado <- sapply(info_archivos$size, convertir_tamaño)
+print(tamaños)
+
+# Write in csv file
+write.csv(tamaños, "../outputs/size_fasta_GBS.csv", row.names = FALSE)
+```
+
+## Epi-GBS
+
+```{r setup, include=FALSE}
+# Get path
+directorio <- "../data/ALL_fasta_Epi-GBS"
+
+# List all files in the directory
+archivos <- list.files(directorio, full.names = TRUE)
+
+# Get size
+info_archivos <- file.info(archivos)
+
+# Display name and size
+tamaños <- data.frame(
+  Archivo = basename(archivos),
+  Tamaño_Bytes = info_archivos$size
+)
+print(tamaños)
+
+# Function to convert bytes into readable units
+convertir_tamaño <- function(tamaño_bytes) {
+  if (tamaño_bytes < 1024) {
+    return(paste(tamaño_bytes, "B"))
+  } else if (tamaño_bytes < 1024^2) {
+    return(paste(round(tamaño_bytes / 1024, 2), "KB"))
+  } else if (tamaño_bytes < 1024^3) {
+    return(paste(round(tamaño_bytes / 1024^2, 2), "MB"))
+  } else {
+    return(paste(round(tamaño_bytes / 1024^3, 2), "GB"))
+  }
+}
+
+# Apply the conversion
+tamaños$Tamaño_abreviado <- sapply(info_archivos$size, convertir_tamaño)
+print(tamaños)
+
+# Write in csv file
+write.csv(tamaños, "../outputs/size_fasta_Epi-GBS.csv", row.names = FALSE)
+```
+
+
+# Get md5 hashes
+## GBS
+
+```{r setup, include=FALSE}
+
+# Path
+directorio <- "../data/ALL_fasta_GBS/"
+
+# List files in the directory
+archivos <- list.files(directorio, full.names = TRUE)
+
+# Check if there are files in the directory
+if (length(archivos) == 0) {
+  stop("No files were found in the specified directory.")
+}
+
+# Calculate MD5 hashes for each file
+hashes <- sapply(archivos, function(archivo) digest(file = archivo, algo = "md5"))
+
+# Create a data frame with the results
+resultado <- data.frame(
+  Archivo = basename(archivos),
+  MD5 = hashes,
+  stringsAsFactors = FALSE
+)
+
+# Print the result
+print(resultado)
+
+# Write in csv file
+write.csv(resultado, "../outputs/md5_fasta_GBS.csv", row.names = FALSE)
+```
+
+
+## Epi-GBS
+
+```{r setup, include=FALSE}
+
+# Path
+directorio <- "../data/ALL_fasta_Epi-GBS/"
+
+# List files in the directory
+archivos <- list.files(directorio, full.names = TRUE)
+
+# Check if there are files in the directory
+if (length(archivos) == 0) {
+  stop("No files were found in the specified directory.")
+}
+
+# Calculate MD5 hashes for each file
+hashes <- sapply(archivos, function(archivo) digest(file = archivo, algo = "md5"))
+
+# Create a data frame with the results
+resultado <- data.frame(
+  Archivo = basename(archivos),
+  MD5 = hashes,
+  stringsAsFactors = FALSE
+)
+
+# Print the result
+print(resultado)
+
+# Write in csv file
+write.csv(resultado, "../outputs/md5_fasta_Epi-GBS.csv", row.names = FALSE)
+```
+
+
+
+
+
+
+
+
