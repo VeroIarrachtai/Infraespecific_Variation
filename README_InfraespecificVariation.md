@@ -53,7 +53,7 @@ El script se encuentra en el directorio ``bin``:
 
 `` ./get_md5_file.sh ../data md5_fasta_GBS.txt``
 
-![Size_md5Yfasta_GBS](outputs/size_md5Yfasta_GBS.png)
+![Size_md5Yfasta_GBS](outputs/Size_md5Yfasta_GBS.png)
 
 P1_S22_L004_R1_001.fastq.gz, 2b4534d05bbeafab63dac1f22cf20975, 22106593915 bytes, 20.58 GB
 P1_S22_L004_R2_001.fastq.gz, d4d7909a38de13af9f99217d91ef3d52, 21971146678 bytes, 20.46 GB
