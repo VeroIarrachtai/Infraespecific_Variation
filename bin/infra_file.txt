@@ -1,3 +1,0 @@
-Epi_GBS.xlsx, 79582ef95d63d9a911153e6938fa0c8f, 40103 bytes, 0 GB
-GBS.xlsx, 2a4df6afb7634757ee955d230e513544, 32309 bytes, 0 GB
-muestreo_dic2020_tidy.xlsx, 0a7b712dea9f719f063b154326734900, 564007 bytes, 0 GB

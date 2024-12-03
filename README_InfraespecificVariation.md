@@ -10,29 +10,27 @@ Los datos .fastq se encuentran en:
 
 ```
 # Datos secuenciación GBS
-/Snoopy/ALL_fasta_GBS
+/Snoopy/RAW_GBS
 
 # Datos secuenciación Epi-GBS
-/Snoopy/ALL_fasta_Epi-GBS
+/Snoopy/RAW_Epi-GBS
 ```
 
 5. Cluster CONABIO cuenta de Verónica
 
 ```
 # Datos secuenciación GBS
-/vreyes/InfraespecioficVariation/data/ALL_fasta_GBS
+LUSTRE/Genetica/vreyes/RAW_GBS
 
 # Datos secuenciación Epi-GBS
-/vreyes/InfraespecioficVariation/data/ALL_fasta_Epi-GBS
+LUSTRE/Genetica/vreyes/RAW_Epi-GBS
 ```
-6. Cluster CONABIO cuenta common
+6. Cluster CONABIO cuenta common. NOTA: Solamente está la P1, P2, P3 y P4 secuenciada por segunda vez
 
 ```
 # Datos secuenciación GBS
-/vreyes/InfraespecioficVariation/data/ALL_fasta_GBS
+LUSTRE/Genetica/common/Abies/RAW_GBS
 
-# Datos secuenciación Epi-GBS
-/vreyes/InfraespecioficVariation/data/ALL_fasta_Epi-GBS
 ```
 
 # Consideraciones de los Datos
@@ -45,27 +43,31 @@ Existen muestras que no cuentan con informacion de coordenadas debido a que no s
 # Size and md5 hashes for GBS and Epi-GBS fasta files
 
 Cada tamaño y codigo md5 fue calculado con el script ``bin/get_md5_file.sh``
-Para utilizar el script se corre desde el directorio ``bin``:
+El script se encuentra en el directorio ``bin``:
 
 ``./get_md5_file.sh <directorio de interés> <nombre del archivo txt con los hashes>``
 
 `` ./get_md5_file.sh ../data md5_fasta_Epi.txt``
 
+
+
 `` ./get_md5_file.sh ../data md5_fasta_GBS.txt``
 
+![Size_md5Yfasta_GBS](outputs/size_md5Yfasta_GBS.png)
 
-Los archivos ".txt" con el
-![Size_fasta_GBS](outputs/size_fasta_GBS.png)
+P1_S22_L004_R1_001.fastq.gz, 2b4534d05bbeafab63dac1f22cf20975, 22106593915 bytes, 20.58 GB
+P1_S22_L004_R2_001.fastq.gz, d4d7909a38de13af9f99217d91ef3d52, 21971146678 bytes, 20.46 GB
+P2_S23_L004_R1_001.fastq.gz, 467bb28f36ecf4179a6680b447747a60, 19191008799 bytes, 17.87 GB
+P2_S23_L004_R2_001.fastq.gz, cea3680f1f6673d074700d60a5e1dec8, 19117334903 bytes, 17.80 GB
+Plate3JPJCGBS_S324_L007_R1_001.fastq.gz, 86c7728faebaa10fe915c49c32f3e7ac, 66596459954 bytes, 62.02 GB
+Plate3JPJCGBS_S324_L007_R2_001.fastq.gz, 7154b1b9f251f6b2d4642f1b50dfe7ea, 75185910302 bytes, 70.02 GB
+Plate4JPJCGBS_S325_L007_R1_001.fastq.gz, c8f1457ace8752cac098cca294d7d5e8, 27826900024 bytes, 25.91 GB
+Plate4JPJCGBS_S325_L007_R2_001.fastq.gz, 268660b037987b23e990e245ea3b170d, 30587385298 bytes, 28.48 GB
+Plate4_second_JPJCGBS_S145_L003_R1_001.fastq.gz, ae4412732c0ee6e5b9936eddf2bb0246, 31690950495 bytes, 29.51 GB
+Plate4_second_JPJCGBS_S145_L003_R2_001.fastq.gz, cbb088e958e3bba823ab0054e87d91d0, 33796918054 bytes, 31.47 GB
 
-![md5_fasta_GBS](outputs/md5_fasta_GBS.png)
 
-![Size_fasta_Epi-GBS](outputs/size_fasta_Epi-GBS.png)
-
-![md5_fasta_Epi-GBS](outputs/md5_fasta_Epi-GBS.png)
-
-
-
-También se pueden calcular a partir del script en R: ``bin/Infraspecific_Variation_Samples.Rmd``
+También la clave md5 y el tamaño de los archivos se pueden calcular a partir del script en R: ``bin/Infraspecific_Variation_Samples.Rmd``
 
 Las tablas con la información se encuentran en ``outputs``
 
@@ -96,7 +98,7 @@ README.md : a markdown file about this project. This file includes the repositor
 
 ```
 | +--data/     # Directory
-|   +--ALL_fasta_GBS     # Directory
+|   +--RAW_GBS     # Directory
 |           +-P1_S22_L004_R2_001.fastq.gz     # Secuencias fasta comprimidas del directorio P1-P2/
 |           +-P1_S22_L004_R1_001.fastq.gz     # Secuencias fasta comprimidas del directorio P1-P2/
 |           +-P2_S23_L004_R1_001.fastq.gz     # Secuencias fasta comprimidas del directorio P1-P2/
@@ -105,9 +107,11 @@ README.md : a markdown file about this project. This file includes the repositor
 |           +-Plate3JPJCGBS_S324_L007_R2_001.fastq.gz     # Secuencias fasta comprimidas del directorio P3-P4/
 |           +-Plate4JPJCGBS_S325_L007_R1_001.fastq.gz     # Secuencias fasta comprimidas del directorio P3-P4/
 |           +-Plate4JPJCGBS_S325_L007_R2_001.fastq.gz     # Secuencias fasta comprimidas del directorio P3-P4/
-|           +-Plate4JPJCGBS_S145_L003_R1_001.fastq.gz     # Secuencias fasta comprimidas del directorio P4-second-time
-|           +-Plate4JPJCGBS_S145_L003_R2_001.fastq.gz     # Secuencias fasta comprimidas del directorio P4-second-time
-|   +--ALL_fasta_Epi-GBS    # Directory
+|           +-Plate_second_4JPJCGBS_S145_L003_R1_001.fastq.gz     # Secuencias fasta comprimidas del directorio P4-second-time
+|           +-Plate_second_4JPJCGBS_S145_L003_R2_001.fastq.gz     # Secuencias fasta comprimidas del directorio P4-second-time
+|   +--RAW_Epi-GBS    # Directory
+|           +-P1_S22_L004_R2_001.fastq.gz     # Secuencias fasta comprimidas
+
 |   +--Epi-GBS/     # Directory
 |       +--FALTA ########################################
 |   +--GBS/     # Directory
