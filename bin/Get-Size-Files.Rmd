@@ -19,6 +19,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r setup, include=FALSE}
 # Load libraries
 library(digest)
+library(gridExtra)
+library(grid)
+library(ggplot2)
 ```
 
 # Get size fasta files 
@@ -61,6 +64,15 @@ print(tamaños)
 
 # Write in csv file
 write.csv(tamaños, "../outputs/size_fasta_GBS.csv", row.names = FALSE)
+
+# Convertir la tabla en un objeto gráfico grob
+tabla_grob <- tableGrob(tamaños)
+
+ggsave("../outputs/size_fasta_GBS.png", width = 6, height = 4)
+
+
+grid.draw(tabla_grob)   # Dibuja el grob en la imagen
+dev.off() 
 ```
 
 ## Epi-GBS

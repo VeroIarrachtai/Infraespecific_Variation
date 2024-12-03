@@ -44,9 +44,17 @@ Existen muestras que no cuentan con informacion de coordenadas debido a que no s
 
 # Size and md5 hashes for GBS and Epi-GBS fasta files
 
-Cada tamaño y codigo md5 fue calculado con el script  ``bin/Infraspecific_Variation_Samples.Rmd``
-Las tablas con la información se encuentran en ``outputs``
+Cada tamaño y codigo md5 fue calculado con el script ``bin/get_md5_file.sh``
+Para utilizar el script se corre desde el directorio ``bin``:
 
+``./get_md5_file.sh <directorio de interés> <nombre del archivo txt con los hashes>``
+
+`` ./get_md5_file.sh ../data md5_fasta_Epi.txt``
+
+`` ./get_md5_file.sh ../data md5_fasta_GBS.txt``
+
+
+Los archivos ".txt" con el
 ![Size_fasta_GBS](outputs/size_fasta_GBS.png)
 
 ![md5_fasta_GBS](outputs/md5_fasta_GBS.png)
@@ -54,6 +62,12 @@ Las tablas con la información se encuentran en ``outputs``
 ![Size_fasta_Epi-GBS](outputs/size_fasta_Epi-GBS.png)
 
 ![md5_fasta_Epi-GBS](outputs/md5_fasta_Epi-GBS.png)
+
+
+
+También se pueden calcular a partir del script en R: ``bin/Infraspecific_Variation_Samples.Rmd``
+
+Las tablas con la información se encuentran en ``outputs``
 
 
 ## GENERAL directory structure:
@@ -165,7 +179,7 @@ README.md : a markdown file about this project. This file includes the repositor
 
 El código cotejado para nombrar cada muestra se puede encontrar en la columna ID_sample_correct de los archivos ``df_GBS_metadata.csv`` y ``df_GBS_metadata.csv``
 
-## ## <span style="color:blue;">Muestras del bosque colectadas a traves del monitoreo participativo</span>
+## Muestras del bosque colectadas a traves del monitoreo participativo
 
 **Ejemplo: A1_N10P02**
 
@@ -207,7 +221,7 @@ El código cotejado para nombrar cada muestra se puede encontrar en la columna I
 
 **Ejemplo: T14_NNAPNA**
 
-- La **letra y el número** hacen referencia al codigo que tiene Gus en sus muestras.
+- La **letra y el número** hacen referencia al codigo que tiene Gus Pérez en sus muestras.
 - El **guión** ayuda a separar los siguientes datos de esa muestras.
 - La **N** se refiere al número de nodos contados para ese árbol registrado.
 - La **P** indica el número de parcela donde fue colectado ese árbol.
